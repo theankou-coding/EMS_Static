@@ -1,68 +1,70 @@
-'use  client';
-import React, { useState } from 'react';
-import { useNavigate } from 'next/navigation';
-import { PencilSquareIcon, TrashIcon } from '@heroicons/react/24/outline';
+"use  client";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/outline";
 
 const attendeesData = [
   {
     id: 1,
-    name: 'Tralalero Tralala',
-    email: 'tralalerotralala@example.com',
-    event: 'Tech Conference 2025',
-    status: 'Confirmed',
-    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+    name: "Tralalero Tralala",
+    email: "tralalerotralala@example.com",
+    event: "Tech Conference 2025",
+    status: "Confirmed",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
     id: 2,
-    name: 'Balerina Kapuchina',
-    email: 'chimpanzinibananini@example.com',
-    event: 'Tech Conference 2025',
-    status: 'Pending',
-    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+    name: "Balerina Kapuchina",
+    email: "chimpanzinibananini@example.com",
+    event: "Tech Conference 2025",
+    status: "Pending",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
   },
   {
     id: 3,
-    name: 'Bombardino Crocodilo',
-    email: 'johndoe@example.com',
-    event: 'Engineering Days',
-    status: 'Cancelled',
-    avatar: 'https://randomuser.me/api/portraits/men/77.jpg',
+    name: "Bombardino Crocodilo",
+    email: "johndoe@example.com",
+    event: "Engineering Days",
+    status: "Cancelled",
+    avatar: "https://randomuser.me/api/portraits/men/77.jpg",
   },
 ];
 
 const statusColors = {
-  Confirmed: 'bg-green-100 text-green-700',
-  Pending: 'bg-yellow-100 text-yellow-700',
-  Cancelled: 'bg-red-100 text-red-700',
+  Confirmed: "bg-green-100 text-green-700",
+  Pending: "bg-yellow-100 text-yellow-700",
+  Cancelled: "bg-red-100 text-red-700",
 };
 
 const events = [
-  { id: 'all', name: 'All Events' },
-  { id: 'Tech Conference 2025', name: 'Tech Conference 2025' },
-  { id: 'Engineering Days', name: 'Engineering Days' },
+  { id: "all", name: "All Events" },
+  { id: "Tech Conference 2025", name: "Tech Conference 2025" },
+  { id: "Engineering Days", name: "Engineering Days" },
 ];
 
 const statuses = [
-  { id: 'all', name: 'All Status' },
-  { id: 'Confirmed', name: 'Confirmed' },
-  { id: 'Pending', name: 'Pending' },
-  { id: 'Cancelled', name: 'Cancelled' },
+  { id: "all", name: "All Status" },
+  { id: "Confirmed", name: "Confirmed" },
+  { id: "Pending", name: "Pending" },
+  { id: "Cancelled", name: "Cancelled" },
 ];
 
 export default function AttendeeManagement() {
   const navigate = useNavigate();
 
-  const [search, setSearch] = useState('');
-  const [selectedEvent, setSelectedEvent] = useState('all');
-  const [selectedStatus, setSelectedStatus] = useState('all');
+  const [search, setSearch] = useState("");
+  const [selectedEvent, setSelectedEvent] = useState("all");
+  const [selectedStatus, setSelectedStatus] = useState("all");
 
   // Filter attendees based on search, event and status
   const filteredAttendees = attendeesData.filter((attendee) => {
     const matchesSearch =
       attendee.name.toLowerCase().includes(search.toLowerCase()) ||
       attendee.email.toLowerCase().includes(search.toLowerCase());
-    const matchesEvent = selectedEvent === 'all' || attendee.event === selectedEvent;
-    const matchesStatus = selectedStatus === 'all' || attendee.status === selectedStatus;
+    const matchesEvent =
+      selectedEvent === "all" || attendee.event === selectedEvent;
+    const matchesStatus =
+      selectedStatus === "all" || attendee.status === selectedStatus;
     return matchesSearch && matchesEvent && matchesStatus;
   });
 
@@ -74,7 +76,7 @@ export default function AttendeeManagement() {
         </h1>
         <div className="flex space-x-3">
           <button
-            onClick={() => navigate('/addattendee')}
+            onClick={() => navigate("/addattendee")}
             type="button"
             className="inline-flex items-center px-4 py-2 bg-indigo-600 border border-transparent rounded-md font-semibold text-white hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300"
           >
@@ -161,43 +163,54 @@ export default function AttendeeManagement() {
               </tr>
             </thead>
             <tbody>
-              {filteredAttendees.map(({ id, name, email, event, status, avatar }) => (
-                <tr key={id} className="border-b border-gray-200 dark:border-gray-700">
-                  <td className="flex items-center px-6 py-3 space-x-3">
-                    <img src={avatar} alt={name} className="h-10 w-10 rounded-full object-cover" />
-                    <div>
-                      <p className="font-medium">{name}</p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">{email}</p>
-                    </div>
-                  </td>
-                  <td className="px-6 py-3">{event}</td>
-                  <td className="px-6 py-3">
-                    <span
-                      className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
-                        statusColors[status] || 'bg-gray-100 text-gray-800'
-                      }`}
-                    >
-                      {status}
-                    </span>
-                  </td>
-                  <td className="px-6 py-3 flex space-x-4">
-                    <button
-                      onClick={() => navigate(`/attendeeedit/${id}`)}
-                      aria-label="Edit"
-                      className="text-blue-600 hover:text-blue-900"
-                    >
-                      <PencilSquareIcon className="w-5 h-5" />
-                    </button>
-                    <button
-                      aria-label="Delete"
-                      className="text-red-600 hover:text-red-900"
-                      onClick={() => alert(`Delete attendee id: ${id}`)}
-                    >
-                      <TrashIcon className="w-5 h-5" />
-                    </button>
-                  </td>
-                </tr>
-              ))}
+              {filteredAttendees.map(
+                ({ id, name, email, event, status, avatar }) => (
+                  <tr
+                    key={id}
+                    className="border-b border-gray-200 dark:border-gray-700"
+                  >
+                    <td className="flex items-center px-6 py-3 space-x-3">
+                      <img
+                        src={avatar}
+                        alt={name}
+                        className="h-10 w-10 rounded-full object-cover"
+                      />
+                      <div>
+                        <p className="font-medium">{name}</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
+                          {email}
+                        </p>
+                      </div>
+                    </td>
+                    <td className="px-6 py-3">{event}</td>
+                    <td className="px-6 py-3">
+                      <span
+                        className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
+                          statusColors[status] || "bg-gray-100 text-gray-800"
+                        }`}
+                      >
+                        {status}
+                      </span>
+                    </td>
+                    <td className="px-6 py-3 flex space-x-4">
+                      <button
+                        onClick={() => navigate(`/attendeeedit/${id}`)}
+                        aria-label="Edit"
+                        className="text-blue-600 hover:text-blue-900"
+                      >
+                        <PencilSquareIcon className="w-5 h-5" />
+                      </button>
+                      <button
+                        aria-label="Delete"
+                        className="text-red-600 hover:text-red-900"
+                        onClick={() => alert(`Delete attendee id: ${id}`)}
+                      >
+                        <TrashIcon className="w-5 h-5" />
+                      </button>
+                    </td>
+                  </tr>
+                )
+              )}
             </tbody>
           </table>
         </div>
