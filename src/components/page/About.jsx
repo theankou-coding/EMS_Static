@@ -11,13 +11,6 @@ const AboutUs = () => {
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#081c33] via-[#0e2a4c] to-[#15355b] text-gray-200 relative overflow-hidden">
       <Navbar />
       <main className="flex-grow py-24 px-6 lg:px-16 relative z-10">
-        {/* Optional subtle overlay */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 opacity-40 bg-gradient-to-br from-[#081c33] via-[#0e2a4c] to-[#15355b] -z-10"
-          style={{ filter: "blur(60px)" }}
-        ></div>
-
         {/* Hero Section */}
         <section className="relative rounded-3xl shadow-lg bg-white bg-opacity-10 p-16 mb-20 text-center max-w-4xl mx-auto backdrop-blur-sm">
           <h1 className="text-5xl font-extrabold drop-shadow-lg mb-4 text-white">
@@ -57,13 +50,13 @@ const AboutUs = () => {
           </div>
 
           {/* Image */}
-          <div className="flex-1 rounded-3xl overflow-hidden shadow-lg border border-blue-700 max-w-lg">
+          {/* <div className="flex-1 rounded-3xl overflow-hidden shadow-lg border border-blue-700 max-w-lg">
             <img
               src={story.image}
               alt={story.title}
               className="w-full h-auto object-cover"
             />
-          </div>
+          </div> */}
         </section>
 
         {/* Core Values */}
@@ -256,7 +249,7 @@ const AboutUs = () => {
         )}
 
         {/* Partners Section */}
-        {partners && partners.items.length > 0 && (
+        {/* {partners && partners.items.length > 0 && (
           <section className="max-w-7xl mx-auto mb-32 text-gray-200">
             <h2 className="text-4xl font-bold text-center text-blue-400 mb-6">
               {partners.title}
@@ -285,7 +278,7 @@ const AboutUs = () => {
               ))}
             </div>
           </section>
-        )}
+        )} */}
 
         {/* Call To Action */}
         <section className="max-w-4xl mx-auto text-center px-8 py-20 bg-blue-900 bg-opacity-70 rounded-3xl shadow-lg text-white">

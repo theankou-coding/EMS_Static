@@ -1,4 +1,5 @@
 // src/data/aboutPageData.ts
+import { images } from "./imageImports";
 
 export interface TeamMember {
   id: number;
@@ -102,7 +103,22 @@ export interface AboutPageData {
     buttonLink: string;
   };
 }
-
+// ========== Core Values for Event System Management ===========
+const story = {
+  title: "Our Inspiring Journey",
+  paragraphs: [
+    "Founded with the vision to simplify complex event management challenges, our platform empowers organizers to create seamless and engaging events.",
+    "From humble beginnings and manual processes, we built a scalable, digital ecosystem integrating AI and automation to streamline every touchpoint of event planning.",
+    "Today, our event system management platform serves hundreds of companies worldwide, making event execution resilient, collaborative, and data-driven.",
+  ],
+  image: images[18],
+  facts: [
+    { label: "Events Managed", value: "500+" },
+    { label: "Active Users", value: "250+" },
+    { label: "Client Satisfaction", value: "98%" },
+    { label: "Countries Served", value: "30" },
+  ],
+};
 // ========== Core Values for Event System Management ===========
 export const coreValues: CoreValue[] = [
   {
@@ -174,7 +190,7 @@ export const teamMembers: TeamMember[] = [
     name: "Emily Rodriguez",
     role: "Founder & CEO",
     bio: "Emily founded our company with a vision to simplify event management through technology that connects people seamlessly.",
-    image: "/images/team/emily-rodriguez.jpg",
+    image: images[17],
     socialLinks: {
       linkedin: "https://linkedin.com/in/emilyrodriguez",
       twitter: "https://twitter.com/emilyrodriguez",
@@ -187,7 +203,7 @@ export const teamMembers: TeamMember[] = [
     name: "David Park",
     role: "Head of Product",
     bio: "David designs powerful features and user-centric workflows that adapt to every kind of event.",
-    image: "/images/team/david-park.jpg",
+    image: images[18],
     socialLinks: {
       linkedin: "https://linkedin.com/in/davidpark",
     },
@@ -199,7 +215,7 @@ export const teamMembers: TeamMember[] = [
     name: "Sofia Lee",
     role: "Lead UX Designer",
     bio: "Sofia leads the user experience team ensuring intuitive interfaces that delight users at every touchpoint.",
-    image: "/images/team/sofia-lee.jpg",
+    image: images[16],
     socialLinks: {
       linkedin: "https://linkedin.com/in/sofialee",
       dribbble: "https://dribbble.com/sofialee",
@@ -212,7 +228,7 @@ export const teamMembers: TeamMember[] = [
     name: "Michael Chen",
     role: "Senior Software Engineer",
     bio: "Michael builds scalable backend systems powering real-time event data and analytics.",
-    image: "/images/team/michael-chen.jpg",
+    image: images[17],
     socialLinks: {
       github: "https://github.com/michaelchen",
     },
@@ -374,8 +390,8 @@ export const aboutPageData: AboutPageData = {
     image: "/images/about/office-team.jpg",
     facts: [
       { label: "Events Managed", value: "500+" },
-      { label: "Active Users", value: "25,000+" },
-      { label: "Client Satisfaction", value: "98%" },
+      { label: "Active Users", value: "250+" },
+      { label: "Client Satisfied", value: "98%" },
       { label: "Countries Served", value: "30" },
     ],
   },
