@@ -15,7 +15,7 @@ const Footer = () => {
         {/* Eventify description and social */}
         <div>
           <h2 className="text-white font-bold flex items-center space-x-2 mb-4 text-lg">
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 text-blue-500"
               fill="none"
@@ -28,8 +28,8 @@ const Footer = () => {
                 strokeWidth={2}
                 d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2v-7H3v7a2 2 0 002 2z"
               />
-            </svg>
-            <span>Eventify</span>
+            </svg> */}
+            <span className="font-bold text-[1.5rem] ">Eventify .</span>
           </h2>
           <p className="text-gray-400 leading-relaxed">
             Your gateway to free technology events, workshops, and networking

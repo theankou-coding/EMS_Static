@@ -1,29 +1,30 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./components/page/Home";
+import HomePage from "./components/page/Home";
 import About from "./components/page/About";
-import Contact from "./components/page/Contact"; // Make sure Contact.jsx is correctly named
-
+import Contact from "./components/page/Contact";
+import LoginPage from "./components/log/LoginPage";
+import SignUpPage from "./components/log/SignUpPage";
+import UserHome from "./components/user/Home";
+import UserEvent from "./components/user/Event";
+import UserCategories from "./components/user/Categories";
 function Page() {
   return (
     <BrowserRouter>
       {/* Navbar remains visible on all pages */}
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Routes>
-        {/* Root route shows Home page */}
-        <Route path="/" element={<Home />} />
-
-        {/* Redirect /home to / for cleaner URL */}
+        <Route path="/" element={<HomePage />} />
         <Route path="/home" element={<Navigate to="/" replace />} />
-
-        {/* About page */}
         <Route path="/about" element={<About />} />
-
-        {/* Contact Us page */}
         <Route path="/contact-us" element={<Contact />} />
-
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/user/home" element={<UserHome />} />
+        <Route path="/user/event" element={<UserEvent />} />
+        <Route path="/user/categories" element={<UserCategories />} />
         {/* Fallback 404 page */}
         <Route
           path="*"
