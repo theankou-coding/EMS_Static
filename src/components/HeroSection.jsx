@@ -1,5 +1,17 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import bgImage from "../assets/Images/bg.png";
+import img1 from '../assets/Images/1.png';
+import img2 from '../assets/Images/2.png';
+import img3 from '../assets/Images/3.png';
+import img4 from '../assets/Images/4.png';
+import img5 from '../assets/Images/5.png';
+import img6 from '../assets/Images/6.png';
+import img7 from '../assets/Images/7.png';
+import img8 from '../assets/Images/8.png';
+import img9 from '../assets/Images/9.png';
+import img10 from '../assets/Images/10.png';
+import img11 from '../assets/Images/11.png';
+import img12 from '../assets/Images/12.png';
 import Footer from "./Footer";
 
 const HeroSection = () => {
@@ -220,20 +232,20 @@ const HeroSection = () => {
   ];
 
   // Gallery images
-  const galleryImages = [
-    { id: 1, src: "/api/placeholder/300/200", alt: "Conference presentation" },
-    { id: 2, src: "/api/placeholder/300/200", alt: "Team collaboration" },
-    { id: 3, src: "/api/placeholder/300/200", alt: "Workshop session" },
-    { id: 4, src: "/api/placeholder/300/200", alt: "Networking event" },
-    { id: 5, src: "/api/placeholder/300/200", alt: "Panel discussion" },
-    { id: 6, src: "/api/placeholder/300/200", alt: "Tech demonstration" },
-    { id: 7, src: "/api/placeholder/300/200", alt: "Awards ceremony" },
-    { id: 8, src: "/api/placeholder/300/200", alt: "Group photo" },
-    { id: 9, src: "/api/placeholder/300/200", alt: "Innovation showcase" },
-    { id: 10, src: "/api/placeholder/300/200", alt: "Speaker session" },
-    { id: 11, src: "/api/placeholder/300/200", alt: "Workshop activity" },
-    { id: 12, src: "/api/placeholder/300/200", alt: "Closing ceremony" },
-  ];
+const galleryImages = [
+  { id: 1, src: img1, alt: "Conference presentation" },
+  { id: 2, src: img2, alt: "Team collaboration" },
+  { id: 3, src: img3, alt: "Workshop session" },
+  { id: 4, src: img4, alt: "Networking event" },
+  { id: 5, src: img5, alt: "Panel discussion" },
+  { id: 6, src: img6, alt: "Tech demonstration" },
+  { id: 7, src: img7, alt: "Awards ceremony" },
+  { id: 8, src: img8, alt: "Group photo" },
+  { id: 9, src: img9, alt: "Innovation showcase" },
+  { id: 10, src: img10, alt: "Speaker session" },
+  { id: 11, src: img11, alt: "Workshop activity" },
+  { id: 12, src: img12, alt: "Closing ceremony" },
+];
 
   // Auto-slide effects
   useEffect(() => {
