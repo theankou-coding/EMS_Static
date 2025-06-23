@@ -85,8 +85,8 @@ const HeroSection = () => {
     subtitle: "Artificial Intelligence Training",
     where: {
       label: "Where",
-      venue: "Pune University",
-      location: "of Proven Tech",
+      venue: "Phnom Penh University",
+      location: "Phnom Penh, Cambodia",
     },
     when: {
       label: "When",
