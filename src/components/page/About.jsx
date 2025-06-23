@@ -1,5 +1,5 @@
 import React from "react";
-import aboutPageData from "../../data/aboutpagedata";
+import aboutPageData from "../../data/aboutpagedata"; // Make sure this contains the right data (see below)
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
@@ -10,7 +10,6 @@ const AboutUs = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#081c33] via-[#0e2a4c] to-[#15355b] text-gray-200 relative overflow-hidden">
       <Navbar />
-
       <main className="flex-grow py-24 px-6 lg:px-16 relative z-10">
         {/* Optional subtle overlay */}
         <div
@@ -56,6 +55,7 @@ const AboutUs = () => {
               </div>
             )}
           </div>
+
           {/* Image */}
           <div className="flex-1 rounded-3xl overflow-hidden shadow-lg border border-blue-700 max-w-lg">
             <img
@@ -299,7 +299,6 @@ const AboutUs = () => {
           </a>
         </section>
       </main>
-
       <Footer />
     </div>
   );

@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import bgImage from "../assets/Images/bg.png";
-import img1 from '../assets/Images/1.png';
-import img2 from '../assets/Images/2.png';
-import img3 from '../assets/Images/3.png';
-import img4 from '../assets/Images/4.png';
-import img5 from '../assets/Images/5.png';
-import img6 from '../assets/Images/6.png';
-import img7 from '../assets/Images/7.png';
-import img8 from '../assets/Images/8.png';
-import img9 from '../assets/Images/9.png';
-import img10 from '../assets/Images/10.png';
-import img11 from '../assets/Images/11.png';
-import img12 from '../assets/Images/12.png';
+import img1 from "../assets/Images/1.png";
+import img2 from "../assets/Images/2.png";
+import img3 from "../assets/Images/3.png";
+import img4 from "../assets/Images/4.png";
+import img5 from "../assets/Images/5.png";
+import img6 from "../assets/Images/6.png";
+import img7 from "../assets/Images/7.png";
+import img8 from "../assets/Images/8.png";
+import img9 from "../assets/Images/9.png";
+import img10 from "../assets/Images/10.png";
+import img11 from "../assets/Images/11.png";
+import img12 from "../assets/Images/12.png";
 import Footer from "./Footer";
 
 const HeroSection = () => {
@@ -232,20 +232,20 @@ const HeroSection = () => {
   ];
 
   // Gallery images
-const galleryImages = [
-  { id: 1, src: img1, alt: "Conference presentation" },
-  { id: 2, src: img2, alt: "Team collaboration" },
-  { id: 3, src: img3, alt: "Workshop session" },
-  { id: 4, src: img4, alt: "Networking event" },
-  { id: 5, src: img5, alt: "Panel discussion" },
-  { id: 6, src: img6, alt: "Tech demonstration" },
-  { id: 7, src: img7, alt: "Awards ceremony" },
-  { id: 8, src: img8, alt: "Group photo" },
-  { id: 9, src: img9, alt: "Innovation showcase" },
-  { id: 10, src: img10, alt: "Speaker session" },
-  { id: 11, src: img11, alt: "Workshop activity" },
-  { id: 12, src: img12, alt: "Closing ceremony" },
-];
+  const galleryImages = [
+    { id: 1, src: img1, alt: "Conference presentation" },
+    { id: 2, src: img2, alt: "Team collaboration" },
+    { id: 3, src: img3, alt: "Workshop session" },
+    { id: 4, src: img4, alt: "Networking event" },
+    { id: 5, src: img5, alt: "Panel discussion" },
+    { id: 6, src: img6, alt: "Tech demonstration" },
+    { id: 7, src: img7, alt: "Awards ceremony" },
+    { id: 8, src: img8, alt: "Group photo" },
+    { id: 9, src: img9, alt: "Innovation showcase" },
+    { id: 10, src: img10, alt: "Speaker session" },
+    { id: 11, src: img11, alt: "Workshop activity" },
+    { id: 12, src: img12, alt: "Closing ceremony" },
+  ];
 
   // Auto-slide effects
   useEffect(() => {
@@ -939,21 +939,11 @@ const galleryImages = [
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                  <svg
-                    className="w-12 h-12 text-gray-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
-                </div>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover rounded-xl"
+                />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <svg
                     className="w-8 h-8 text-white"
