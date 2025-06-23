@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, Fragment } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { mainNavigation } from "../data/home/navigation";
-import logoIcon from "../assets/Images/logo-white.png";
+import logoIcon from "../assets/Images/logo.png";
 
 const Navbar = ({ user = null, onLogout }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -230,13 +230,14 @@ const Navbar = ({ user = null, onLogout }) => {
       <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3 justify-center">
-          <div className="relative h-16 w-20 flex-shrink-0">
+          {/* <div className="relative h-14 w-20 flex-shrink-0">
             <img
               src={logoIcon}
               alt="ems-logo"
               className="object-contain h-full w-full"
             />
-          </div>
+          </div> */}
+          <span className="font-bold text-white text-[1.5rem]">Eventify .</span>
         </Link>
 
         {/* Desktop Navigation */}
