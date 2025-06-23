@@ -9,6 +9,7 @@ import SignUpPage from "./components/log/SignUpPage";
 import UserHome from "./components/user/Home";
 import UserEvent from "./components/user/Event";
 import UserCategories from "./components/user/Categories";
+import ForgetPasswordPage from "./components/log/FogetPassword";
 function Page() {
   return (
     <BrowserRouter>
@@ -21,6 +22,7 @@ function Page() {
         <Route path="/about" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/forget" element={<ForgetPasswordPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/user/home" element={<UserHome />} />
         <Route path="/user/event" element={<UserEvent />} />
