@@ -1,5 +1,5 @@
-import { React } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import React from "react";
+import { NavLink } from "react-router-dom";
 import "./style/index.css";
 import AdminDashboard from "./components/AdminDashboard";
 

@@ -12,6 +12,9 @@ import img9 from "../assets/Images/9.png";
 import img10 from "../assets/Images/10.png";
 import img11 from "../assets/Images/11.png";
 import img12 from "../assets/Images/12.png";
+import speaker1Img from "../assets/Images/16.png";
+import speaker2Img from "../assets/Images/17.png";
+import speaker3Img from "../assets/Images/18.png";
 import Footer from "./Footer";
 
 const HeroSection = () => {
@@ -120,7 +123,7 @@ const HeroSection = () => {
       name: "Dr. Chan Sokha",
       title:
         "Renowned psychologist specializing in mental health and well-being.",
-      image: "/api/placeholder/300/400",
+      image: speaker1Img,
       expertise: ["Psychology", "Mental Health", "Wellness"],
       experience: "15+ years",
     },
@@ -128,7 +131,7 @@ const HeroSection = () => {
       id: 2,
       name: "Mr. Sok Chea",
       title: "Award-winning entrepreneur and business strategist.",
-      image: "/api/placeholder/300/400",
+      image: speaker2Img,
       expertise: ["Business Strategy", "Entrepreneurship", "Innovation"],
       experience: "12+ years",
     },
@@ -136,7 +139,7 @@ const HeroSection = () => {
       id: 3,
       name: "Ms. Chea Lina",
       title: "Innovative tech leader shaping the future of AI and robotics.",
-      image: "/api/placeholder/300/400",
+      image: speaker3Img,
       expertise: ["AI Technology", "Robotics", "Tech Innovation"],
       experience: "10+ years",
     },
@@ -689,19 +692,11 @@ const HeroSection = () => {
                     >
                       {/* Speaker Image Placeholder */}
                       <div className="w-full h-40 bg-gray-200 rounded-xl mb-4 flex items-center justify-center">
-                        <svg
-                          className="w-16 h-16 text-gray-400"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                          />
-                        </svg>
+                        <img
+                          src={speaker.image}
+                          alt={speaker.name}
+                          className="w-full h-40 object-cover rounded-xl mb-4"
+                        />
                       </div>
 
                       {/* Speaker Info */}
